@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo75nmcl2c8qy"
-path="res://.godot/imported/bisquit 1.png-7468d7662158919881a0f1906061097f.ctex"
+uid="uid://cl03v10sej4fi"
+path="res://.godot/imported/biscuit sheet.png-caadbe665bda5adc1ce1b4a7aa000a46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Biscuit-Buttle/assets/bisquit 1.png"
-dest_files=["res://.godot/imported/bisquit 1.png-7468d7662158919881a0f1906061097f.ctex"]
+source_file="res://Biscuit-Buttle/assets/biscuit sheet.png"
+dest_files=["res://.godot/imported/biscuit sheet.png-caadbe665bda5adc1ce1b4a7aa000a46.ctex"]
 
 [params]
 
