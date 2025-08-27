@@ -113,4 +113,4 @@ position = Vector2(2, 0)
 scale = Vector2(1.21875, 1.44034)
 sprite_frames = SubResource("SpriteFrames_ottg3")
 animation = &"run"
-frame_progress = 0.604066
+frame_progress = 0.660128
