@@ -26,13 +26,13 @@ region = Rect2(96, 0, 32, 32)
 atlas = ExtResource("2_7ocig")
 region = Rect2(128, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ocig"]
-atlas = ExtResource("2_7ocig")
-region = Rect2(0, 32, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpdg2"]
 atlas = ExtResource("2_7ocig")
 region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ocig"]
+atlas = ExtResource("2_7ocig")
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r444s"]
 atlas = ExtResource("2_7ocig")
@@ -79,10 +79,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7ocig")
+"texture": SubResource("AtlasTexture_kpdg2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kpdg2")
+"texture": SubResource("AtlasTexture_7ocig")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_r444s")
@@ -102,6 +102,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.346954, 0.346954)
 script = ExtResource("1_ottg3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -112,5 +113,13 @@ shape = SubResource("RectangleShape2D_t0867")
 position = Vector2(2, 0)
 scale = Vector2(1.21875, 1.44034)
 sprite_frames = SubResource("SpriteFrames_ottg3")
-animation = &"run"
-frame_progress = 0.660128
+animation = &"idle"
+frame_progress = 0.971255
+
+[node name="dash time" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="dash again time" type="Timer" parent="."]
+
+[connection signal="timeout" from="dash time" to="." method="_on_dash_time_timeout"]
+[connection signal="timeout" from="dash again time" to="." method="_on_dash_again_time_timeout"]
