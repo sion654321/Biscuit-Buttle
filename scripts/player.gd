@@ -5,9 +5,10 @@ const JUMP_VELOCITY = -430.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 const DASH_SPEED = 750
 var dashing = false
-@onready var dash_time: Timer = $"dash time"
-@onready var dash_again_time: Timer = $"dash again time"
+
 var can_dash = true
+@onready var dash_again_time: Timer = $"timers/dash again time"
+@onready var dash_time: Timer = $"timers/dash time"
 
 
 
@@ -26,7 +27,7 @@ func _physics_process(delta: float) -> void:
 		dash_time.start()
 		can_dash = false
 		dash_again_time.start()
-	
+		animated_sprite_2d.play("dash")
 	
 	var direction := Input.get_axis("move left", "move right")
 	
@@ -36,11 +37,11 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.flip_h = true
 	
 	if is_on_floor():
-		if direction == 0: 
+		if direction == 0 and dashing == false: 
 			animated_sprite_2d.play("idle")
-		else:
+		elif direction!= 0 and dashing == false:
 			animated_sprite_2d.play("run")
-	else:
+	elif dashing == false:
 		animated_sprite_2d.play("jump")
 	if direction:
 		if dashing:
