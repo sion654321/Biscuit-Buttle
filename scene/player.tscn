@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://bxg0je5y0wrh0"]
 
-[ext_resource type="Script" uid="uid://cymn1brb6glgb" path="res://Biscuit-Buttle/scripts/player.gd" id="1_ottg3"]
-[ext_resource type="Texture2D" uid="uid://cl03v10sej4fi" path="res://Biscuit-Buttle/assets/biscuit sheet.png" id="2_7ocig"]
+[ext_resource type="Script" uid="uid://cymn1brb6glgb" path="res://scripts/player.gd" id="1_ottg3"]
+[ext_resource type="Texture2D" uid="uid://cl03v10sej4fi" path="res://assets/biscuit sheet.png" id="2_7ocig"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t0867"]
 size = Vector2(25, 39.5)
