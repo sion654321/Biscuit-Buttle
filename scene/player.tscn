@@ -155,8 +155,7 @@ position = Vector2(2, 0)
 scale = Vector2(1.21875, 1.44034)
 sprite_frames = SubResource("SpriteFrames_ottg3")
 animation = &"dash"
-frame = 4
-frame_progress = 1.0
+frame_progress = 0.602979
 
 [node name="timers" type="Node" parent="."]
 
